@@ -6,8 +6,11 @@ const router = express.Router();
 
 router.post("/", async (req, res) => {
   try {
-    const { name, questions, answers, theme, feedback, score } =
-      req.body;
+    const { name, questions, answers, theme, feedback, score } = req.body;
+
+    if (!name || !questions || !answers || !theme || !feedback || !score) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
 
     const newUser = new User({
       fullName: name,
