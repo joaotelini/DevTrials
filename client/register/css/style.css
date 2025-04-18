@@ -1,0 +1,88 @@
+/* Reset e fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background: linear-gradient(to right, #0f0f0f, #1f1f1f);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background: #222;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(0, 255, 164, 0.2);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: 2px solid #00ffa4;
+  background: #2a2a2a;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #00ffa4;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #00cc85;
+}
