@@ -29,6 +29,8 @@ async function register() {
     }
 
     console.log("Usuário registrado com sucesso:", data.message);
+    window.location.assign('http://127.0.0.1:5500/client/home/index.html');
+
   } catch (error) {
     console.error("Erro na requisição:", error);
     alert("Erro ao registrar. Tente novamente.");
