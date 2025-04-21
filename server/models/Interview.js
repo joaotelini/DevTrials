@@ -1,12 +1,12 @@
-import moongose from "mongoose";
+import mongoose from "mongoose";
 
-const questionsAnswer = new moongose.Schema({
+const questionsAnswer = new mongoose.Schema({
   question: String,
   answer: String,
 });
 
-const interviewSchema = new moongose.Schema({
-  userId: { type: moongose.Schema.Types.ObjectId, ref: "User" },
+const interviewSchema = new mongoose.Schema({
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   theme: String,
   questions: [questionsAnswer],
   feedback: String,
@@ -14,4 +14,4 @@ const interviewSchema = new moongose.Schema({
   date: { type: Date, default: Date.now },
 });
 
-export default moongose.model("Interview", interviewSchema);
+export default mongoose.model("Interview", interviewSchema);
